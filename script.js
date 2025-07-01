@@ -1,28 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f2f4f7;
-  color: #333;
-}
+// script.js
 
-header {
-  background: #2d3748;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
+// Mensaje de carga
+console.log("AI Toolbox cargado correctamente");
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
-}
+// Puedes agregar aquí funciones interactivas más adelante
+// Por ejemplo: abrir detalles, mostrar descripciones extendidas, etc.
 
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
-                                }
+// Ejemplo: alerta cuando se hace clic en una tarjeta
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    const title = card.querySelector('h2').innerText;
+    alert(`Estás explorando: ${title}`);
+  });
+});
